@@ -65,7 +65,7 @@ function calculateResults() {
         const syringeUnits = (selectedDose / concentration) * 100;
         const vialDoses = selectedStrength / selectedDose;
 
-        document.getElementById('peptide-dose').textContent = `${selectedDose} mg`;
+        document.getElementById('peptide-dose').textContent = `X Desired Amount: ${selectedDose} mg`;
         document.getElementById('syringe-units').textContent = `${Math.round(syringeUnits)} units`;
         document.getElementById('progress-bar').style.width = `${Math.min(syringeUnits, 100)}%`;
         document.getElementById('vial-doses').textContent = `${vialDoses.toFixed(2)} doses`;
@@ -74,7 +74,7 @@ function calculateResults() {
         document.getElementById('error-message').style.display = 'none';
     } else {
         document.getElementById('error-message').style.display = 'block';
-        document.getElementById('error-message').textContent = 'Please enter valid values for dose, strength, and water.';
+        document.getElementById('error-message').textContent = 'Please enter valid values for X desired amount, strength, and water.';
     }
 }
 
