@@ -8,10 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>DRAW & DOSE CALCULATOR</h1>
+        <h1>CALCULATOR</h1>
         <div class="section">
             <div class="card" id="dose-card">
-                <img src="https://cdn.shopify.com/s/files/1/0588/0859/8663/files/Dose_Icon_a63cb611-6699-442f-87b4-16d03256cb6e_small.png?v=1718531914" alt="Dose of Peptide" style="height: 150px;">
                 <h2>Desired Amount of Peptide</h2>
                 <div class="buttons">
                     <button onclick="selectDose(this, 0.1)">0.1mg</button>
@@ -30,8 +29,7 @@
                 <p>10 mg = 10000 mcg(μg)</p>
             </div>
             <div class="card" id="strength-card">
-                <img src="https://github.com/AdeenaAftab/Peptide-Calculator1/raw/main/WhatsApp%20Image%202024-09-05%20at%204.29.17%20AM.jpeg" alt="Peptide Strength" style="height: 150px; width: 200px;">
-                <h2>Peptide Strength</h2>
+                <h2>Total Amount in Vial</h2>
                 <div class="buttons">
                     <button onclick="selectStrength(this, 1)">1mg</button>
                     <button onclick="selectStrength(this, 5)">5mg</button>
@@ -44,7 +42,6 @@
                 </div>
             </div>
             <div class="card" id="water-card">
-                <img src="https://github.com/AdeenaAftab/Peptide-Calculator1/raw/main/WhatsApp%20Image%202024-09-05%20at%204.29.17%20AM.jpeg" alt="Bacteriostatic Water" style="height: 150px; width: 200px;">
                 <h2>Bacteriostatic Water</h2>
                 <div class="buttons">
                     <button onclick="selectWater(this, 0.5)" class="selected">0.5mL</button>
@@ -56,12 +53,13 @@
                     <button onclick="selectWater(this, 'Other')">Other</button>
                     <input id="water-other-input" type="number" placeholder="Enter water amount" style="display: none;" oninput="setOtherWater(this)">
                 </div>
-                <p>Common Amounts<br>GLP-1s: 0.5mL to 1mL<br>Peptides: 2.5mL to 3mL</p>
+                <p>Most vials hold a maximum of 3ml or 300 units</p> 
+                <p>1ml =100units</p>
             </div>
         </div>
         <div class="result">
             <h2>Result</h2>
-            <p>PEPTIDE DOSE<br><span id="peptide-dose">10 mg</span></p>
+            <p>PEPTIDE AMOUNT<br><span id="peptide-dose">10 mg</span></p>
             <p>DRAW SYRINGE TO<br><span id="syringe-units">25 units</span></p>
             <div class="scale-wrapper">
                 <div class="scale">
@@ -81,7 +79,7 @@
                     <span class="scale-reading">100</span>
                 </div>
             </div>
-            <p>YOUR VIAL CONTAINS<br><span id="vial-doses">2 doses</span></p>
+            <p>YOUR VIAL CONTAINS<br><span id="vial-doses">2 X Desired Amount</span></p>
             <p>CONCENTRATION<br><span id="concentration">40 mg/mL</span></p>
             <p id="error-message" class="error-message"></p>
         </div>
