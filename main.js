@@ -68,7 +68,6 @@ function calculateResults() {
         document.getElementById('peptide-dose').textContent = `${selectedDose} mg`;
         document.getElementById('syringe-units').textContent = `${Math.round(syringeUnits)} units`;
         document.getElementById('progress-bar').style.width = `${Math.min(syringeUnits, 100)}%`;
-        document.getElementById('vial-doses').textContent = `${vialDoses.toFixed(2)} doses`;
         document.getElementById('concentration').textContent = `${concentration.toFixed(2)} mg/mL`;
 
         document.getElementById('error-message').style.display = 'none';
